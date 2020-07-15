@@ -2,65 +2,121 @@
 <html>
 
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
+
+
+
+.test{
+  margin:auto;
+
+  text-align:center;
+
+
+  font-size: 150%;
+  width: 25%;
+  height:100px;
+
+
+}
+.center {
+  margin:auto;
+  width:50%;
+  margin-top: 40px;
+
+  text-align: center;
+
+
+
+  border: 4px solid white;
+  border-radius: 25px;
+
+  padding: 40px;
+  background-color: red;
+  color:white;
+
+}
+
+.centerDiv {
+  float:clear;
+  margin:auto;
+  width:10%;
+
+  width: 150px;
+  height: 150px;
+  border: 4px solid blue;
+  border-radius: 125px;
+}
+
+
 .imgbox {
-  float: left;
+
+  float:clear;
+  margin:auto;
+  width:10%;
+  margin-top: 20px;
+  margin-bottom: 20px
+
+
   text-align: center;
   font-size: 150%;
-  width: 18%;
+  width: 150px;
   height: 150px;
   border: 4px solid black;
-  background-color: red;
-  color: white;
-  margin: 4px;
-  padding: 6px;
+  border-radius: 125px;
 
- border-radius: 25px;
+  background-color: yellow;
+  color: black;
+
+  padding: 6px;
+  float:clear;
+
 }
+
+
+
 
 .imgbox2 {
 
-  float: left;
+  float: clear;
+  margin:auto;
+  margin-top:90px;
   text-align: center;
-  background-color: red;
+  background-color: black;
   color: white;
 
 
   font-size: 150%;
-  width: 15%;
-  height:80px;
-  border: 4px solid black;
+  width: 25%;
+  height:200px;
+  border: 4px solid white;
   border-radius: 25px;
-  margin: 8px;
+
   padding-top: 36px ;
 }
 
 .imgbox3 {
 
-  float: left;
+  float: clear;
+  margin:auto;
+  margin-top: 20px;
   text-align: center;
   background-color: red;
   color: white;
 
 
   font-size: 150%;
-  width: 15%;
-  height:80px;
-  border: 4px solid black;
+  width: 25%;
+  height:200px;
+  border: 4px solid white;
   border-radius: 25px;
-  margin: 8px;
+
   padding-top: 36px ;
 }
 
-.center {
-  //padding-left: 200px;
-  width:25%;
-  border: 4px solid black;
-  background-color: yellow;
-  border-radius: 25px;
-  margin-left: 210px;
 
-}
 
 .body {
   background-color: grey;
@@ -75,18 +131,19 @@
 <body class = "body">
 
 
+<h1 class="center">Quick Tricklation</h1>
 
-<h1 class="center">Quick Translation Tricks</h1>
 
-<button class = "imgbox" id = "box1" onclick="mixUp[ranVTIndx][0]()">Click for a Cum Clause</button>
+<p class="test">
+<button class = "imgbox" id = "box1"   onclick="mixUp[ranVTIndx][0]()">Start!</button>
 
-<button class = "imgbox" id = "box2" onclick="mixUp[ranVTIndx][1]()">Click for Translation</button>
+<button class = "imgbox" id = "box2"  onclick="mixUp[ranVTIndx][1]()">Click for Trick!</button>
+</p>
 
-</br>
+<p class = "imgbox2" id="latin"></p>
 
-<p class = "imgbox2" id="demo"></p>
+<p class = "imgbox3" id="trans"></p>
 
-<p class = "imgbox3" id="demo2"></p>
 
 <script>
 
@@ -476,18 +533,18 @@ function unHideBox2(){
 }
 
 function hideDemo(){
-  document.getElementById("demo").style.display = "none" ;
+  document.getElementById("latin").style.display = "none" ;
 }
 
 function unHideDemo(){
-  document.getElementById("demo").style.display = "block" ;
+  document.getElementById("latin").style.display = "block" ;
 }
 function hideDemo2(){
-  document.getElementById("demo2").style.display = "none" ;
+  document.getElementById("trans").style.display = "none" ;
 }
 
 function unHideDemo2(){
-  document.getElementById("demo2").style.display = "block" ;
+  document.getElementById("trans").style.display = "block" ;
 }
 
 hideBox2();
@@ -496,42 +553,26 @@ hideDemo2();
 
 function changeBoxColorsOne(){
 
-  document.getElementById("box2").style.background = "black" ;
-  document.getElementById("box2").style.borderColor = "red" ;
-  document.getElementById("demo").style.background= "red" ;
-  document.getElementById("demo").style.borderColor= "black" ;
+  document.getElementById("box2").style.background = "yellow" ;
+  document.getElementById("box2").style.borderColor = "black" ;
+  document.getElementById("latin").style.background= "black" ;
+  document.getElementById("latin").style.borderColor= "white" ;
 }
 
 function changeBoxColorsTwo(){
 
-  document.getElementById("box1").style.background= "red" ;
+  document.getElementById("box1").style.background= "yellow" ;
   document.getElementById("box1").style.borderColor= "black" ;
 
-  document.getElementById("demo").style.background= "black" ;
-  document.getElementById("demo").style.borderColor= "red" ;
+  document.getElementById("latin").style.background= "black" ;
+  document.getElementById("latin").style.borderColor= "red" ;
 
-  document.getElementById("demo2").style.background= "white" ;
-  document.getElementById("demo2").style.borderColor= "black" ;
-  document.getElementById("demo2").style.color= "black" ;
+  document.getElementById("trans").style.background= "white" ;
+  document.getElementById("trans").style.borderColor= "black" ;
+  document.getElementById("trans").style.color= "black" ;
 }
 
-ranVT2Indx = Math.floor(Math.random() * mixUp2.length);
-function test1() {
 
-resetRanIndices();
-  //var res = strIng[ranStrIngIndx][0].substring(0, strIng[ranStrIngIndx][0].length-1) + peStr[ranPeStrIndx][0];
-var latin =  mixUp2[ranVT2Indx][0];
-
-  hideBox1();
-  unHideBox2();
-  unHideDemo();
-  hideDemo2();
-  changeBoxColorsOne();
-
-
-document.getElementById("demo").innerHTML = latin;
-
-}
 
 
 
@@ -545,7 +586,7 @@ unHideDemo2();
 changeBoxColorsTwo();
 
 
-  document.getElementById("demo2").innerHTML = latinTrans;
+  document.getElementById("trans").innerHTML = latinTrans;
 
 //resetRanIndices();
 }
@@ -564,7 +605,7 @@ function myFunctionPluPer() {
   changeBoxColorsOne();
 
 
-document.getElementById("demo").innerHTML = pastSOT[ranPastSOTIndx][0] + resPluPer + ", " + latinClass.accSing() + " " + resPer;
+document.getElementById("latin").innerHTML = pastSOT[ranPastSOTIndx][0] + resPluPer + ", " + latinClass.accSing() + " " + resPer;
 
 
 
@@ -582,7 +623,7 @@ unHideDemo2();
 changeBoxColorsTwo();
 
 
-  document.getElementById("demo2").innerHTML = pastSOT[ranPastSOTIndx][1] + resPluPerTrans + ", " + resPerTrans + " the " + transClass.object;
+  document.getElementById("trans").innerHTML = pastSOT[ranPastSOTIndx][1] + resPluPerTrans + ", " + resPerTrans + " the " + transClass.object;
 
 
 
@@ -604,7 +645,7 @@ function myFunction() {
   changeBoxColorsOne();
 
 
-document.getElementById("demo").innerHTML = presSOT[ranPresSOTIndx][0] + res ;
+document.getElementById("latin").innerHTML = presSOT[ranPresSOTIndx][0] + res ;
 
 }
 
@@ -620,7 +661,7 @@ unHideDemo2();
 changeBoxColorsTwo();
 
 
-  document.getElementById("demo2").innerHTML = presSOT[ranPresSOTIndx][1] + resTrans;
+  document.getElementById("trans").innerHTML = presSOT[ranPresSOTIndx][1] + resTrans;
 
 resetRanIndices();
 }
@@ -634,7 +675,7 @@ function myFunctionP() {
   hideDemo2();
   changeBoxColorsOne();
 
-  document.getElementById("demo").innerHTML = presSOT[ranPresSOTIndx][0] + resP ;
+  document.getElementById("latin").innerHTML = presSOT[ranPresSOTIndx][0] + resP ;
 
 
 }
@@ -653,7 +694,7 @@ changeBoxColorsTwo();
 //var resTransP =  peStrP[ranPeStrPIndx][1] + " " + strP[ranStrPIndx][1];
 
 //document.getElementById("demo").innerHTML = resTransP ;
-document.getElementById("demo2").innerHTML = presSOT[ranPresSOTIndx][1] + resTransP ;
+document.getElementById("trans").innerHTML = presSOT[ranPresSOTIndx][1] + resTransP ;
 
 
 resetRanIndices();
@@ -669,7 +710,7 @@ function myFunctionImp() {
   hideDemo2();
   changeBoxColorsOne();
 
-  document.getElementById("demo").innerHTML = pastSOT[ranPastSOTIndx][0] + resImp + ", " + resPer;
+  document.getElementById("latin").innerHTML = pastSOT[ranPastSOTIndx][0] + resImp + ", " + resPer;
 
 
 }
@@ -686,7 +727,7 @@ unHideDemo2();
 changeBoxColorsTwo();
 
 
-document.getElementById("demo2").innerHTML = pastSOT[ranPastSOTIndx][1] + resImpTrans + ", " + resPerTrans;
+document.getElementById("trans").innerHTML = pastSOT[ranPastSOTIndx][1] + resImpTrans + ", " + resPerTrans;
 
 
 resetRanIndices();
@@ -703,7 +744,7 @@ function myFunctionImpP() {
   hideDemo2();
   changeBoxColorsOne();
 
-  document.getElementById("demo").innerHTML = pastSOT[ranPastSOTIndx][0] + resImpP;
+  document.getElementById("latin").innerHTML = pastSOT[ranPastSOTIndx][0] + resImpP;
 
 
 }
@@ -720,7 +761,7 @@ unHideDemo2();
 changeBoxColorsTwo();
 
 
-document.getElementById("demo2").innerHTML = pastSOT[ranPastSOTIndx][1] + resImpTransP;
+document.getElementById("trans").innerHTML = pastSOT[ranPastSOTIndx][1] + resImpTransP;
 
 
 resetRanIndices();
@@ -740,7 +781,7 @@ function myFunctionFut() {
   hideDemo2();
   changeBoxColorsOne();
 
-  document.getElementById("demo").innerHTML = resFut ;
+  document.getElementById("latin").innerHTML = resFut ;
 
 
 }
@@ -757,7 +798,7 @@ unHideDemo2();
 changeBoxColorsTwo();
 
 
-document.getElementById("demo2").innerHTML = resFutTrans ;
+document.getElementById("trans").innerHTML = resFutTrans ;
 
 
 resetRanIndices();
@@ -774,7 +815,7 @@ function myFunctionFutP() {
   hideDemo2();
   changeBoxColorsOne();
 
-  document.getElementById("demo").innerHTML = resFutP;
+  document.getElementById("latin").innerHTML = resFutP;
 
 
 }
@@ -791,7 +832,7 @@ unHideDemo2();
 changeBoxColorsTwo();
 
 
-document.getElementById("demo2").innerHTML = resFutTransP;
+document.getElementById("trans").innerHTML = resFutTransP;
 
 
 resetRanIndices();
@@ -809,7 +850,7 @@ function myFunctionPer() {
   changeBoxColorsOne();
 
 
-document.getElementById("demo").innerHTML = "scio cur " + resPer;
+document.getElementById("latin").innerHTML = "scio cur " + resPer;
 
 }
 
@@ -824,7 +865,7 @@ unHideDemo2();
 changeBoxColorsTwo();
 
 
-  document.getElementById("demo2").innerHTML = "I know why " + resPerTrans;
+  document.getElementById("trans").innerHTML = "I know why " + resPerTrans;
 
 
 
@@ -844,7 +885,7 @@ function myFunctionFutPer() {
   changeBoxColorsOne();
 
 
-document.getElementById("demo").innerHTML = resFutPer;
+document.getElementById("latin").innerHTML = resFutPer;
 
 }
 
@@ -860,7 +901,7 @@ unHideDemo2();
 changeBoxColorsTwo();
 
 
-  document.getElementById("demo2").innerHTML = resFutPerTrans;
+  document.getElementById("trans").innerHTML = resFutPerTrans;
 
 
 
@@ -881,7 +922,7 @@ var pPVerb = perPVerb[ranPerPVerbIndex][0];
   changeBoxColorsOne();
 
 
-document.getElementById("demo").innerHTML = presSOT[ranPresSOTIndx][0] + pPVerb;
+document.getElementById("latin").innerHTML = presSOT[ranPresSOTIndx][0] + pPVerb;
 
 }
 
@@ -896,7 +937,7 @@ unHideDemo2();
 changeBoxColorsTwo();
 
 
-  document.getElementById("demo2").innerHTML = presSOT[ranPresSOTIndx][1] + pPVerbEng;
+  document.getElementById("trans").innerHTML = presSOT[ranPresSOTIndx][1] + pPVerbEng;
 
 
 
@@ -916,7 +957,7 @@ var pluPVerbP = pluPVerb[ranPerPVerbIndex][0];
   changeBoxColorsOne();
 
 
-document.getElementById("demo").innerHTML = pastSOT[ranPastSOTIndx][0] + pluPVerbP;
+document.getElementById("latin").innerHTML = pastSOT[ranPastSOTIndx][0] + pluPVerbP;
 
 }
 
@@ -931,7 +972,7 @@ unHideDemo2();
 changeBoxColorsTwo();
 
 
-  document.getElementById("demo2").innerHTML = pastSOT[ranPastSOTIndx][1] + pluPVerbEng;
+  document.getElementById("trans").innerHTML = pastSOT[ranPastSOTIndx][1] + pluPVerbEng;
 
 
 
@@ -951,7 +992,7 @@ var futPerPVerbP = futPerPVerb[ranPerPVerbIndex][0];
   changeBoxColorsOne();
 
 
-document.getElementById("demo").innerHTML = futPerPVerbP;
+document.getElementById("latin").innerHTML = futPerPVerbP;
 
 }
 
@@ -966,7 +1007,7 @@ unHideDemo2();
 changeBoxColorsTwo();
 
 
-  document.getElementById("demo2").innerHTML = futPerPVerbEng;
+  document.getElementById("trans").innerHTML = futPerPVerbEng;
 
 
 
